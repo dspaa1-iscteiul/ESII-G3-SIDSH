@@ -1,6 +1,8 @@
-package ESII_2020_G3.SIDSH;
+package sidsh.sci;
 
 import java.util.ArrayList;
+
+import cgi.cgi_lib;
 
 public class GenerateHTML {
 

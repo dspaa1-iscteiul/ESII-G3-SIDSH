@@ -1,4 +1,4 @@
-package ESII_2020_G3.SIDSH;
+package sidsh.sci;
 
 import java.io.File;
 import java.io.FileInputStream;

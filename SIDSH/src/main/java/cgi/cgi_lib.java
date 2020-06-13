@@ -1,4 +1,4 @@
-package ESII_2020_G3.SIDSH;
+package cgi;
 
 import java.util.*;
 import java.io.*;
@@ -44,7 +44,7 @@ import java.io.*;
  * @author Pat L. Durante
  *
  */
-class cgi_lib
+public class cgi_lib
 {
 
   /**
