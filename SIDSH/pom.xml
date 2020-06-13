@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>ESII-2020-G3</groupId>
-	<artifactId>SIDSH</artifactId>
+	<artifactId>Covid-SCI-Discoveries</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>SIDSH</name>
+	<name>Covid-SCI-Discoveries</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -38,101 +38,27 @@
 	</dependencies>
 
 	<build>
+		<finalName>covid-sci-discoveries</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<archive>
+						<manifest>
+							<mainClass>es2.g3.sidsh.sci.GenerateHTML</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
 				<executions>
 					<execution>
-						<id>build-a</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
-						<configuration>
-							<archive>
-								<manifest>
-									<mainClass>sidsh.sci.GenerateHTML</mainClass>
-								</manifest>
-							</archive>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-							<finalName>covid-sci-discoveries.jar</finalName>
-							<excludes>
-								<exclude>src/main/java/sidsh/evolution/**</exclude>
-								<exclude>src/main/java/sidsh/graph/**</exclude>
-								<exclude>src/main/java/sidsh/query/**</exclude>
-							</excludes>
-						</configuration>
-					</execution>
-					<execution>
-						<id>build-b</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<archive>
-								<manifest>
-									<mainClass>sidsh.graph.GenerateHTML</mainClass>
-								</manifest>
-							</archive>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-							<finalName>covid-graph-spread.jar</finalName>
-							<excludes>
-								<exclude>src/main/java/sidsh/evolution/**</exclude>
-								<exclude>src/main/java/sidsh/sci/**</exclude>
-								<exclude>src/main/java/sidsh/query/**</exclude>
-							</excludes>
-						</configuration>
-					</execution>
-					<execution>
-						<id>build-c</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<archive>
-								<manifest>
-									<mainClass>sidsh.query.GenerateHTML</mainClass>
-								</manifest>
-							</archive>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-							<finalName>covid-query.jar</finalName>
-							<excludes>
-								<exclude>src/main/java/sidsh/evolution/**</exclude>
-								<exclude>src/main/java/sidsh/graph/**</exclude>
-								<exclude>src/main/java/sidsh/sci/**</exclude>
-							</excludes>
-						</configuration>
-					</execution>
-					<execution>
-						<id>build-d</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<archive>
-								<manifest>
-									<mainClass>sidsh.evolution.GenerateHTML</mainClass>
-								</manifest>
-							</archive>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-							<finalName>covid-evolution-diff.jar</finalName>
-							<excludes>
-								<exclude>src/main/java/sidsh/sci/**</exclude>
-								<exclude>src/main/java/sidsh/graph/**</exclude>
-								<exclude>src/main/java/sidsh/query/**</exclude>
-							</excludes>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>

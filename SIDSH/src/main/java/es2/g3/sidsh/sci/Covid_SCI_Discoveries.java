@@ -1,7 +1,7 @@
 /**
  * 
  */
-package sidsh.sci;
+package es2.g3.sidsh.sci;
 
 import java.io.File;
 import java.io.FileInputStream;
