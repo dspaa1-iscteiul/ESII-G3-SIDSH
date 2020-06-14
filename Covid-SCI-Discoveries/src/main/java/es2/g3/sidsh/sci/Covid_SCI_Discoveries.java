@@ -27,11 +27,16 @@ import pl.edu.icm.cermine.exception.AnalysisException;
  */
 public class Covid_SCI_Discoveries {
 
-	public static String ARTICLES_FOLDER = "articles/";
+//	public static String ARTICLES_FOLDER = "articles/";
+	private String articles_folder;
 	private ArrayList<Article> articles = new ArrayList<Article>();
 
+	public Covid_SCI_Discoveries(String articles_folder) {
+		this.articles_folder = articles_folder;
+	}
+
 	public HashMap<String, InputStream> getPdfFiles() {
-		File folder = new File(ARTICLES_FOLDER);
+		File folder = new File(articles_folder);
 		File[] listOfFiles = folder.listFiles();
 		HashMap<String, InputStream> pdfFiles = new HashMap<String, InputStream>();
 
@@ -48,7 +53,7 @@ public class Covid_SCI_Discoveries {
 	}
 
 	public boolean notYetExtracted(File file) {
-		File meta = new File(ARTICLES_FOLDER + file.getName() + ".metadata");
+		File meta = new File(articles_folder + file.getName() + ".metadata");
 		if (!meta.exists())
 			return true;
 		else {
@@ -109,11 +114,11 @@ public class Covid_SCI_Discoveries {
 			throw new RuntimeException(ex);
 		}
 	}
-	
+
 	public ArrayList<Article> generateArticles() {
 		HashMap<String, InputStream> pdfs = getPdfFiles();
 
-		for (Map.Entry<String, InputStream> entry: pdfs.entrySet()) {
+		for (Map.Entry<String, InputStream> entry : pdfs.entrySet()) {
 			try {
 				ContentExtractor extractor = new ContentExtractor();
 				extractor.setPDF(entry.getValue());
@@ -121,6 +126,7 @@ public class Covid_SCI_Discoveries {
 				Document doc = new Document(result);
 				Article article = extractNLM(doc);
 				article.setFileName(entry.getKey());
+				article.setArticles_folder(articles_folder);
 				articles.add(article);
 				article.exportToFile();
 			} catch (AnalysisException e) {
@@ -132,5 +138,13 @@ public class Covid_SCI_Discoveries {
 			}
 		}
 		return articles;
+	}
+	
+	public String getArticles_folder() {
+		return articles_folder;
+	}
+	
+	public void setArticles_folder(String articles_folder) {
+		this.articles_folder = articles_folder;
 	}
 }

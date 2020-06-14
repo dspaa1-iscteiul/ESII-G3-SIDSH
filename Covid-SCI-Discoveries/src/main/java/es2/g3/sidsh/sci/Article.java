@@ -15,13 +15,15 @@ public class Article  implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 8111379870462365232L;
+	private String articles_folder;
 	private String fileName;
 	private String title;
 	private String journal_name;
 	private String pub_year;
 	private ArrayList<String> authors;
 	
-	public Article(String fileName, String title, String journal_name, String pub_year, ArrayList<String> authors) {
+	public Article(String articles_folder, String fileName, String title, String journal_name, String pub_year, ArrayList<String> authors) {
+		this.articles_folder = articles_folder;
 		this.fileName = fileName;
 		this.title = title;
 		this.journal_name = journal_name;
@@ -77,6 +79,14 @@ public class Article  implements Serializable {
 		this.fileName = fileName;
 	}
 	
+	public String getArticles_folder() {
+		return articles_folder;
+	}
+	
+	public void setArticles_folder(String articles_folder) {
+		this.articles_folder = articles_folder;
+	}
+	
 	public String getAuthorsString() {
 		String autores = "";
 		for (String s: authors) {
@@ -94,7 +104,7 @@ public class Article  implements Serializable {
 	}
 	
 	public void exportToFile() throws IOException {
-		File f = new File(Covid_SCI_Discoveries.ARTICLES_FOLDER + fileName + ".metadata");
+		File f = new File(articles_folder + fileName + ".metadata");
 		FileOutputStream file = new FileOutputStream(f);
 		ObjectOutputStream oos = new ObjectOutputStream(file);
 		oos.writeObject(this);
