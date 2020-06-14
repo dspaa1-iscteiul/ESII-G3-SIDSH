@@ -5,10 +5,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -29,13 +33,17 @@ public class Covid_Graph_Spread {
 	private static String url = "https://github.com/vbasto-iscte/ESII1920.git";
 	private static String destination = "./Repository/";
 	
+	public Covid_Graph_Spread() throws InvalidRemoteException, TransportException, IOException, GitAPIException, ParseException {
+		cloneRepository();
+		fileInfoForEachTag();
+	}
+	
 	public void cloneRepository()
 			throws InvalidRemoteException, TransportException, IOException, GitAPIException {
 		Path path = Paths.get(destination);
 		File dir=new File(destination);
 		if(!dir.exists())
 			dir.mkdir();
-//		if (Files.isDirectory(path)) {
 			if (!Files.list(path).findAny().isPresent() && dir.exists()) {
 				repo = Git.cloneRepository().setBare(true).setURI(url).setDirectory(path.toFile())
 						.setBranchesToClone(Arrays.asList("refs/heads/master")).setCloneAllBranches(true)
@@ -45,11 +53,9 @@ public class Covid_Graph_Spread {
 				repo.fetch().call();
 			
 			}
-			
-		
 	}
 
-	public void fileInfoForEachTag() throws GitAPIException, MissingObjectException, IncorrectObjectTypeException, IOException {
+	public void fileInfoForEachTag() throws GitAPIException, MissingObjectException, IncorrectObjectTypeException, IOException, ParseException {
 		tags = repo.tagList().call();
 		for (org.eclipse.jgit.lib.Ref refToTag : tags) {
 			System.out.println("Tag: " + refToTag + " " + refToTag.getName().substring(10) + " "
@@ -58,48 +64,22 @@ public class Covid_Graph_Spread {
 			RevWalk walk = new RevWalk(repo.getRepository());
 			RevObject obj = walk.parseAny(refToTag.getObjectId());
 			RevCommit commit;
-//    	RevTag tag;
 			// lightweight tag(points to a Commit)
 			if (obj instanceof RevCommit) {
 				commit = walk.parseCommit(refToTag.getObjectId());
-				FileInfo info=new FileInfo(new Date(commit.getCommitTime() * 1000L), refToTag.getName().substring(10),
+				DateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+				df.setTimeZone(TimeZone.getTimeZone("GMT+1"));
+				String date=df.format(new Date(commit.getCommitTime() * 1000L));
+			
+				FileInfo info=new FileInfo(date, refToTag.getName().substring(10),
 						commit.getFullMessage());
 				fileInfo.add(info);
-//				System.out.println("commit message: " + commit.getFullMessage() + " commit time: "
-//						+ new Date(commit.getCommitTime() * 1000L));
-				System.out.println(info);
 			}
-			// annotated tag(points to a tag object)
-			// in this particular case every tag points
-			// to a commit, not worth using
-			// tag.getTaggerIdent() because we want the
-			// file timestamp (commit time)
-			// and not the time the tag was made
-//    	else if(obj instanceof RevTag) {
-//    		tag = walk.parseTag(refToTag.getObjectId());
-//    		System.out.println("tag message: "+tag.getFullMessage());
-//    	}
-
 		}
 	}
 	
 	public ArrayList<FileInfo> getFileInfo(){
 		return fileInfo;
 	}
-
-//	public void commitForEachTag() throws IOException, NoHeadException, GitAPIException {
-//		LogCommand log = repo.log();
-//    	Repository r=repo.getRepository();
-//    	Ref peeledRef=r.getRefDatabase().peel(tags.get(1));
-//    	if(peeledRef.getPeeledObjectId()!=null)
-//    		log.add(peeledRef.getPeeledObjectId());
-//    	else
-//    		log.add(tags.get(1).getObjectId());
-//    	
-//    	Iterable<RevCommit> logs=log.call();
-//    	for(RevCommit rev: logs) {
-//    		System.out.println("Commit: " + rev  + ", name: " + rev.getName() + ", id: " + rev.getId().getName());
-//    	}
-//	}
 
 }
