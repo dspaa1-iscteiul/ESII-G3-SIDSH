@@ -15,3 +15,13 @@ Elementos do grupo:
 
 As funcionalidades pedidas foram quase todas implementadas.
 No entanto, a funcionalidade do Rodrigo Alves, foi parcialmente implementada (highilights) e a funcionalidade do Éric Sancha também foi parcialmente implementada (não foi implementado os operadores lógicos).
+
+
+Instruções de instalação do software
+
+
+O utilizador deve ter o Docker instalado na sua máquina.
+
+Duplo clique no ficheiro "instalador.bat" (ficheiro fornecido na pen de instalação)
+
+Iniciar o site através do endereço http://192.168.99.100/ no seu browser
