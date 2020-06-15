@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import cgi.cgi_lib;
 
 /**
- * Classe que gera o HTML com a tabela com as informações extraídas do artigo
+ * Classe que gera o HTML com a tabela com as informações extraidas do artigo
  * @author dariop
  *
  */
