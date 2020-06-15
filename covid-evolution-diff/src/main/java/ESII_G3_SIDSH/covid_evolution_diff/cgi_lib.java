@@ -1,7 +1,7 @@
-package cgi;
+package ESII_G3_SIDSH.covid_evolution_diff;
 
-import java.util.*;
-import java.io.*;
+import java.util.*; 
+import java.io.*;   
 
 /**
  * cgi_lib.java<p>
