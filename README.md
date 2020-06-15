@@ -16,6 +16,9 @@ Repositório para o projeto de Engenharia de Software II 2020 do ISCTE-IUL, grup
 As funcionalidades pedidas foram quase todas implementadas.
 No entanto, a funcionalidade do Rodrigo Alves, foi parcialmente implementada (highilights) e a funcionalidade do Éric Sancha também foi parcialmente implementada (não foi implementado os operadores lógicos).
 
+Afonso Pinto - Na alinea h) não consegui efetuar como que os visitantes do site ( sem registo ) fizessem contribuições para o CovidWiki, as mesma estão destinadas para apenas o administrador e os membros do site. Para substituir essa funcionalidade adicionei a possibilidade de inserir comentarios por parte de todos os visitantes nesta secção.
+               Na alinea n) apenas o administrador é capaz de ver as Analytics do site.
+
 
 ## Instruções de instalação do software
 
