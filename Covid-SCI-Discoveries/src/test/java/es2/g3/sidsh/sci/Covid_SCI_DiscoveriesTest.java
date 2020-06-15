@@ -5,6 +5,10 @@ package es2.g3.sidsh.sci;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.File;
+
+import org.jdom.Document;
+import org.jdom.JDOMException;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,6 +20,8 @@ import org.junit.jupiter.api.Test;
  *
  */
 class Covid_SCI_DiscoveriesTest {
+	
+	Covid_SCI_Discoveries covid = new Covid_SCI_Discoveries("");
 
 	/**
 	 * @throws java.lang.Exception
@@ -23,34 +29,13 @@ class Covid_SCI_DiscoveriesTest {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
+	
 	/**
 	 * Test method for {@link es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest#getPdfFiles()}.
 	 */
 	@Test
 	void testGetPdfFiles() {
-		fail("Not yet implemented");
+		assertThrows(NullPointerException.class, () -> covid.getPdfFiles());
 	}
 
 	/**
@@ -58,7 +43,7 @@ class Covid_SCI_DiscoveriesTest {
 	 */
 	@Test
 	void testNotYetExtracted() {
-		fail("Not yet implemented");
+		assertTrue(covid.notYetExtracted(new File(" "), false));
 	}
 
 	/**
@@ -66,23 +51,26 @@ class Covid_SCI_DiscoveriesTest {
 	 */
 	@Test
 	void testIsPdf() {
-		fail("Not yet implemented");
+		File f = new File("a.pdf");
+		assertTrue(covid.isPdf(f));
 	}
 
 	/**
 	 * Test method for {@link es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest#extractXPathValue(org.jdom.Document, java.lang.String)}.
+	 *
 	 */
 	@Test
 	void testExtractXPathValue() {
-		fail("Not yet implemented");
+		assertThrows(JDOMException.class, () -> Covid_SCI_Discoveries.extractXPathValue(new Document(), ""));
 	}
 
 	/**
 	 * Test method for {@link es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest#extractAuthors(org.jdom.Document, java.lang.String)}.
+	 * 
 	 */
 	@Test
-	void testExtractAuthors() {
-		fail("Not yet implemented");
+	void testExtractAuthors(){
+		assertThrows(JDOMException.class, () -> Covid_SCI_Discoveries.extractAuthors(new Document(),""));
 	}
 
 	/**
@@ -90,15 +78,14 @@ class Covid_SCI_DiscoveriesTest {
 	 */
 	@Test
 	void testExtractNLM() {
-		fail("Not yet implemented");
-	}
+		assertThrows(IllegalStateException.class, () -> covid.extractNLM(new Document()));	}
 
 	/**
 	 * Test method for {@link es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest#generateArticles()}.
 	 */
 	@Test
 	void testGenerateArticles() {
-		fail("Not yet implemented");
+		assertThrows(NullPointerException.class, () -> covid.generateArticles());
 	}
 
 }

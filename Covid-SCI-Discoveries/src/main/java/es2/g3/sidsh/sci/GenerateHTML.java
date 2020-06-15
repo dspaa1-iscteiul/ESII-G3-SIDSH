@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 import cgi.cgi_lib;
 
+/**
+ * Classe que gera o HTML com a tabela com as informações extraídas do artigo
+ * @author dariop
+ *
+ */
 public class GenerateHTML {
 
 	public static void main(String[] args) {

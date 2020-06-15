@@ -9,6 +9,11 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * Classe que representa um artigo
+ * @author dariop
+ *
+ */
 public class Article  implements Serializable {
 	
 	/**
@@ -22,6 +27,15 @@ public class Article  implements Serializable {
 	private String pub_year;
 	private ArrayList<String> authors;
 	
+	/**
+	 * Constrututor de um artigo, com os seguintes parametros
+	 * @param articles_folder
+	 * @param fileName
+	 * @param title
+	 * @param journal_name
+	 * @param pub_year
+	 * @param authors
+	 */
 	public Article(String articles_folder, String fileName, String title, String journal_name, String pub_year, ArrayList<String> authors) {
 		this.articles_folder = articles_folder;
 		this.fileName = fileName;
@@ -31,7 +45,11 @@ public class Article  implements Serializable {
 		this.authors = authors;
 	}
 	
+	/**
+	 * Construtor default: cria um artigo mas apenas deixa as variaveis em branco
+	 */
 	public Article() {
+		articles_folder="";
 		fileName="";
 		title="";
 		journal_name="";
@@ -87,6 +105,10 @@ public class Article  implements Serializable {
 		this.articles_folder = articles_folder;
 	}
 	
+	/**
+	 * Devolve uma string personalizada dos autores do artigo
+	 * @return
+	 */
 	public String getAuthorsString() {
 		String autores = "";
 		for (String s: authors) {
@@ -103,6 +125,10 @@ public class Article  implements Serializable {
 				+ getAuthorsString() + "]";
 	}
 	
+	/**
+	 * Exporta os metadados do artigo para um ficheiro
+	 * @throws IOException
+	 */
 	public void exportToFile() throws IOException {
 		File f = new File(articles_folder + fileName + ".metadata");
 		FileOutputStream file = new FileOutputStream(f);
@@ -112,6 +138,13 @@ public class Article  implements Serializable {
 		file.close();
 	}
 	
+	/**
+	 * Cria um novo artigo com base em um ficheiro de metadados
+	 * @param meta
+	 * @return
+	 * @throws ClassNotFoundException
+	 * @throws IOException
+	 */
 	public static Article newArticle(File meta) throws ClassNotFoundException, IOException {
 		FileInputStream file = new FileInputStream(meta);
 		ObjectInputStream ois = new ObjectInputStream(file);

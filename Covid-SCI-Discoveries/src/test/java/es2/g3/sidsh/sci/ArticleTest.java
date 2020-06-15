@@ -5,8 +5,8 @@ package es2.g3.sidsh.sci;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,33 +16,23 @@ import org.junit.jupiter.api.Test;
  *
  */
 class ArticleTest {
+	
+	static Article article;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		article = new Article();
 	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
+	
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterEach
-	void tearDown() throws Exception {
+		article = new Article();
 	}
 
 	/**
@@ -50,15 +40,8 @@ class ArticleTest {
 	 */
 	@Test
 	void testArticleStringStringStringStringArrayListOfString() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link es2.g3.sidsh.sci.Article#Article()}.
-	 */
-	@Test
-	void testArticle() {
-		fail("Not yet implemented");
+		@SuppressWarnings("unused")
+		Article art = new Article("a", "a.pdf", "a", "a", "2019", new ArrayList<String>());
 	}
 
 	/**
@@ -66,7 +49,7 @@ class ArticleTest {
 	 */
 	@Test
 	void testGetTitle() {
-		fail("Not yet implemented");
+		assertEquals("", article.getTitle());
 	}
 
 	/**
@@ -74,7 +57,8 @@ class ArticleTest {
 	 */
 	@Test
 	void testSetTitle() {
-		fail("Not yet implemented");
+		article.setTitle("a");
+		assertEquals("a", article.getTitle());
 	}
 
 	/**
@@ -82,7 +66,7 @@ class ArticleTest {
 	 */
 	@Test
 	void testGetJournal_name() {
-		fail("Not yet implemented");
+		assertEquals("", article.getJournal_name());
 	}
 
 	/**
@@ -90,7 +74,8 @@ class ArticleTest {
 	 */
 	@Test
 	void testSetJournal_name() {
-		fail("Not yet implemented");
+		article.setJournal_name("a");
+		assertEquals("a", article.getJournal_name());
 	}
 
 	/**
@@ -98,7 +83,7 @@ class ArticleTest {
 	 */
 	@Test
 	void testGetPub_year() {
-		fail("Not yet implemented");
+		assertEquals("", article.getPub_year());
 	}
 
 	/**
@@ -106,7 +91,8 @@ class ArticleTest {
 	 */
 	@Test
 	void testSetPub_year() {
-		fail("Not yet implemented");
+		article.setPub_year("2019");
+		assertEquals("2019", article.getPub_year());
 	}
 
 	/**
@@ -114,7 +100,7 @@ class ArticleTest {
 	 */
 	@Test
 	void testGetAuthors() {
-		fail("Not yet implemented");
+		article.getAuthors();
 	}
 
 	/**
@@ -122,7 +108,9 @@ class ArticleTest {
 	 */
 	@Test
 	void testSetAuthors() {
-		fail("Not yet implemented");
+		ArrayList<String> autor = new ArrayList<String>();
+		article.setAuthors(autor);
+		assertEquals(autor, article.getAuthors());
 	}
 
 	/**
@@ -130,7 +118,7 @@ class ArticleTest {
 	 */
 	@Test
 	void testGetFileName() {
-		fail("Not yet implemented");
+		assertEquals("", article.getFileName());
 	}
 
 	/**
@@ -138,7 +126,8 @@ class ArticleTest {
 	 */
 	@Test
 	void testSetFileName() {
-		fail("Not yet implemented");
+		article.setFileName("a.pdf");
+		assertEquals("a.pdf", article.getFileName());
 	}
 
 	/**
@@ -146,7 +135,7 @@ class ArticleTest {
 	 */
 	@Test
 	void testGetAuthorsString() {
-		fail("Not yet implemented");
+		assertEquals("", article.getAuthorsString());
 	}
 
 	/**
@@ -154,23 +143,9 @@ class ArticleTest {
 	 */
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link es2.g3.sidsh.sci.Article#exportToFile()}.
-	 */
-	@Test
-	void testExportToFile() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link es2.g3.sidsh.sci.Article#newArticle(java.io.File)}.
-	 */
-	@Test
-	void testNewArticle() {
-		fail("Not yet implemented");
+		article = new Article();
+		String s = "Article [title=, journal_name=, pub_year=, authors=]";
+		assertTrue(s.equals(article.toString()));
 	}
 
 }
