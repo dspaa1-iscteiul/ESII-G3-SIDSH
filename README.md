@@ -27,6 +27,8 @@ O utilizador deve ter o Docker instalado na sua máquina e deve estar a correr.
 
 Descompactar o ficheiro WordpressWebsite.zip em uma pasta à sua escolha.
 
-Duplo clique no ficheiro "instalador.bat", que se encontra descompactado
+Duplo clique no ficheiro "instalador.bat", que se encontra descompactado na pasta WordpressCovidSite
+
+QUANDO TERMINAR A EXECUÇÃO DO SCRIPT ANTERIOR, fazer duplo clique no ficheiro "migrador.bat", que se encontra descompactado na pasta WordpressCovidSite
 
 Iniciar o site através do endereço http://192.168.99.100/ no seu browser
