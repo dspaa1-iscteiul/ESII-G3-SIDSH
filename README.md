@@ -12,3 +12,6 @@ Elementos do grupo:
 83404 - Éric Sancha
 
 73106 - Afonso Pinto
+
+As funcionalidades pedidas foram quase todas implementadas.
+No entanto, a funcionalidade do Rodrigo Alves, foi parcialmente implementada (highilights) e a funcionalidade do Éric Sancha também foi parcialmente implementada (não foi implementado os operadores lógicos).
