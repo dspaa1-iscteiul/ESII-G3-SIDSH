@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.068" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.062" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="PT"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\dariop\AppData\Local\Temp\surefire4995882360097298174\surefirebooter6948102486907640218.jar C:\Users\dariop\AppData\Local\Temp\surefire4995882360097298174 2020-06-15T03-54-27_877-jvmRun1 surefire3161605263130606521tmp surefire_08012571366622860159tmp"/>
+    <property name="sun.java.command" value="C:\Users\dariop\AppData\Local\Temp\surefire5116665064409538522\surefirebooter5342069244773442516.jar C:\Users\dariop\AppData\Local\Temp\surefire5116665064409538522 2020-06-15T04-22-39_931-jvmRun1 surefire3534434602731176694tmp surefire_04461911304923070314tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\dariop\git\ESII-G3-SIDSH\Covid-SCI-Discoveries\target\test-classes;C:\Users\dariop\git\ESII-G3-SIDSH\Covid-SCI-Discoveries\target\classes;C:\Users\dariop\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\dariop\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\dariop\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\dariop\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\dariop\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\dariop\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\dariop\.m2\repository\pl\edu\icm\cermine\cermine-impl\1.13\cermine-impl-1.13.jar;C:\Users\dariop\.m2\repository\tw\edu\ntu\csie\libsvm\3.17\libsvm-3.17.jar;C:\Users\dariop\.m2\repository\org\jdom\jdom\1.1.3\jdom-1.1.3.jar;C:\Users\dariop\.m2\repository\jaxen\jaxen\1.1.6\jaxen-1.1.6.jar;C:\Users\dariop\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\dariop\.m2\repository\com\google\guava\guava\19.0\guava-19.0.jar;C:\Users\dariop\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\dariop\.m2\repository\commons-cli\commons-cli\1.3.1\commons-cli-1.3.1.jar;C:\Users\dariop\.m2\repository\edu\umass\cs\mallet\mallet\0.1.3\mallet-0.1.3.jar;C:\Users\dariop\.m2\repository\edu\umass\cs\mallet\grmm-deps\0.1.3\grmm-deps-0.1.3.jar;C:\Users\dariop\.m2\repository\com\itextpdf\itextpdf\5.5.11\itextpdf-5.5.11.jar;C:\Users\dariop\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.54\bcprov-jdk15on-1.54.jar;C:\Users\dariop\.m2\repository\commons-io\commons-io\2.5\commons-io-2.5.jar;C:\Users\dariop\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\dariop\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\dariop\.m2\repository\xerces\xercesImpl\2.11.0\xercesImpl-2.11.0.jar;C:\Users\dariop\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\dariop"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\dariop\AppData\Local\Temp\surefire4995882360097298174\surefirebooter6948102486907640218.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\dariop\AppData\Local\Temp\surefire5116665064409538522\surefirebooter5342069244773442516.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_221\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,11 +60,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testExtractAuthors" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.031"/>
+  <testcase name="testExtractAuthors" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.027"/>
   <testcase name="testIsPdf" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0"/>
   <testcase name="testGenerateArticles" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.001"/>
-  <testcase name="testExtractNLM" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.026"/>
+  <testcase name="testExtractNLM" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.025"/>
   <testcase name="testNotYetExtracted" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.001"/>
-  <testcase name="testGetPdfFiles" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.002"/>
+  <testcase name="testGetPdfFiles" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.001"/>
   <testcase name="testExtractXPathValue" classname="es2.g3.sidsh.sci.Covid_SCI_DiscoveriesTest" time="0.001"/>
 </testsuite>

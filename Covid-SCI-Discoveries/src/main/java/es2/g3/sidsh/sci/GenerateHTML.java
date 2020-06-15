@@ -36,9 +36,10 @@ public class GenerateHTML {
 		if (args.length == 0) {
 			System.out.println("<h2>Não foi especificado o caminho para os ficheiros</h2>");
 		} else {
+			String linkFolder = cermine.getArticles_folder().substring(13);
 			for (Article article : articles) {
 				System.out.println("<tr>");
-				System.out.println("<td><a href=\"" + cermine.getArticles_folder() + article.getFileName() + "\">"
+				System.out.println("<td><a href=\"" + linkFolder + article.getFileName() + "\">"
 						+ article.getTitle() + "</a></td>");
 				System.out.println("<td>" + article.getJournal_name() + "</td>");
 				System.out.println("<td>" + article.getPub_year() + "</td>");

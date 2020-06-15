@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/dariop/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar;C:/Users/dariop/.m2/repository/edu/umass/cs/mallet/grmm-deps/0.1.3/grmm-deps-0.1.3.jar;C:/Users/dariop/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.54/bcprov-jdk15on-1.54.jar;C:/Users/dariop/.m2/repository/edu/umass/cs/mallet/mallet/0.1.3/mallet-0.1.3.jar;C:/Users/dariop/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar;C:/Users/dariop/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar;C:/Users/dariop/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar;C:/Users/dariop/.m2/repository/com/itextpdf/itextpdf/5.5.11/itextpdf-5.5.11.jar;C:/Users/dariop/.m2/repository/org/jdom/jdom/1.1.3/jdom-1.1.3.jar;C:/Users/dariop/.m2/repository/commons-cli/commons-cli/1.3.1/commons-cli-1.3.1.jar;C:/Users/dariop/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar;C:/Users/dariop/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar;C:/Users/dariop/.m2/repository/pl/edu/icm/cermine/cermine-impl/1.13/cermine-impl-1.13.jar;C:/Users/dariop/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar;C:/Users/dariop/.m2/repository/tw/edu/ntu/csie/libsvm/3.17/libsvm-3.17.jar;C:/Users/dariop/.m2/repository/jaxen/jaxen/1.1.6/jaxen-1.1.6.jar;C:/Users/dariop/.m2/repository/com/google/guava/guava/19.0/guava-19.0.jar'
+-encoding
+'ISO-8859-1'
+-protected
+-sourcepath
+'C:/Users/dariop/git/ESII-G3-SIDSH/Covid-SCI-Discoveries/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2020. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/dariop/git/ESII-G3-SIDSH/Covid-SCI-Discoveries/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Covid-SCI-Discoveries 1.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/dariop/git/ESII-G3-SIDSH/Covid-SCI-Discoveries/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Covid-SCI-Discoveries 1.0 API'
