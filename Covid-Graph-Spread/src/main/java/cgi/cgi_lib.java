@@ -1,4 +1,4 @@
-package es2.g3.sidsh.sci;
+package cgi;
 
 import java.util.*;
 import java.io.*;

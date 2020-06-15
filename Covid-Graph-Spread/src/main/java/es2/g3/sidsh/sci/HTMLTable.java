@@ -8,10 +8,14 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.api.errors.InvalidRemoteException;
 import org.eclipse.jgit.api.errors.TransportException;
 
+import cgi.cgi_lib;
+
 public class HTMLTable {
 
 public static void main(String[] args) throws InvalidRemoteException, TransportException, IOException, GitAPIException, ParseException {
 		Covid_Graph_Spread app=new Covid_Graph_Spread();
+		app.cloneRepository();
+		app.fileInfoForEachTag();
 		ArrayList<FileInfo> fileInfo=app.getFileInfo();
 		
 		System.out.println(cgi_lib.Header());

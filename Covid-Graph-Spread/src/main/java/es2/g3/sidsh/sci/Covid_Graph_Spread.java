@@ -33,10 +33,6 @@ public class Covid_Graph_Spread {
 	private static String url = "https://github.com/vbasto-iscte/ESII1920.git";
 	private static String destination = "./Repository/";
 	
-	public Covid_Graph_Spread() throws InvalidRemoteException, TransportException, IOException, GitAPIException, ParseException {
-		cloneRepository();
-		fileInfoForEachTag();
-	}
 	
 	public void cloneRepository()
 			throws InvalidRemoteException, TransportException, IOException, GitAPIException {
@@ -58,9 +54,6 @@ public class Covid_Graph_Spread {
 	public void fileInfoForEachTag() throws GitAPIException, MissingObjectException, IncorrectObjectTypeException, IOException, ParseException {
 		tags = repo.tagList().call();
 		for (org.eclipse.jgit.lib.Ref refToTag : tags) {
-			System.out.println("Tag: " + refToTag + " " + refToTag.getName().substring(10) + " "
-					+ refToTag.getObjectId().getName());
-
 			RevWalk walk = new RevWalk(repo.getRepository());
 			RevObject obj = walk.parseAny(refToTag.getObjectId());
 			RevCommit commit;
@@ -80,6 +73,14 @@ public class Covid_Graph_Spread {
 	
 	public ArrayList<FileInfo> getFileInfo(){
 		return fileInfo;
+	}
+	
+	public Git getRepo() {
+		return repo;
+	}
+	
+	public List<org.eclipse.jgit.lib.Ref> getTags(){
+		return tags;
 	}
 
 }
