@@ -17,10 +17,7 @@ As funcionalidades pedidas foram quase todas implementadas.
 No entanto, a funcionalidade do Rodrigo Alves, foi parcialmente implementada (highilights) e a funcionalidade do Éric Sancha também foi parcialmente implementada (não foi implementado os operadores lógicos).
 
 Afonso Pinto -
-               Na alinea h) não consegui fazer com que os visitantes do site ( sem registo ) fizessem contribuições para o CovidWiki, as                mesma estão destinadas para apenas o administrador e os membros do site. Para substituir essa funcionalidade adicionei a                possibilidade de inserir comentarios por parte de todos os visitantes nesta secção.
-
-               Na alínea k) o utilizador ao registar-se fica com o nome de utilizador com a primeira parte do email, exemplo:          
-               afonsopinto27@gmail.com fica com nome de utilizador afonsopinto27.
+               Na alinea h) não consegui fazer com que os visitantes do site ( sem registo ) fizessem contribuições para o CovidWiki, as                mesma estão destinadas para apenas o administrador e os membros do site. Para substituir essa funcionalidade adicionei a                possibilidade de inserir comentarios por parte de todos os visitantes nesta secção
                
                Na alinea n) apenas o administrador é capaz de ver as Analytics do site.
 
