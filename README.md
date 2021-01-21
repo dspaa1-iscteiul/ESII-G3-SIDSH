@@ -34,3 +34,6 @@ Duplo clique no ficheiro "instalador.bat", que se encontra descompactado na past
 QUANDO TERMINAR A EXECUÇÃO DO SCRIPT ANTERIOR, fazer duplo clique no ficheiro "migrador.bat", que se encontra descompactado na pasta WordpressCovidSite
 
 Iniciar o site através do endereço http://192.168.99.100/ no seu browser
+
+-------
+Group project of Software Engineering II course. We learned how to use Jenkins and Docker as part of the Continuous Integration and Continuous Delivering
